@@ -1,0 +1,41 @@
+
+
+
+ <H1>Student Information Systems </H1>
+<p>Our student information system database, Data Base Plus allows you to manage student and staff data in an intuitive format
+that ensures data integrity, accurate reporting and quick access to information. Stored data is shared across all modules
+and other programs at your school.</p> 
+   
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="firstName">Enter your first name</label>
+      <input type="text" class="form-control"  [(ngModel)]="fName"  name="fName" id="fName" placeholder="Enter first name" >
+     
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Enter last name</label>
+      <input type="text" class="form-control" [(ngModel)]="lName" name="lastname"  id="lname" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+      <label for="middlename">Enter your middle name </label>
+      <input type="text" class="form-control" [(ngModel)]="mName" name="middlename" id="mname" placeholder="Enter middle name">
+    </div>
+    
+         <div class="form-group">
+      <label for="Program">Program</label>
+      <select class="form-control" id="Program" name="Program" [(ngModel)]="program">
+        <option>MIS</option>
+        <option>CS</option>
+        <option>EM</option>
+        <option>SWEN</option>
+
+      </select>
+
+    </div>
+      
+          <button class="btn btn-primary" (click)="Onsubmit()" type="submit">submit data</button>
+
+        </form>
+        </div>

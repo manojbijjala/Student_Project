@@ -1,0 +1,24 @@
+<!-- <app-studentform  (newStudentAdded)="addStudent($event)"></app-studentform> -->
+<div class="container">
+<table class="table table-hover">
+    <thead>
+        <tr><td>StudentId</td>
+            <td>Firtsname</td>
+            <td>Lastname</td>
+            <td>Middlename</td>
+            <td>Program</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of studentsArray; index as i; ">
+            <!-- <th scope ="row">{{i+1}}</th> -->
+            <td>{{stud.id}}</td>
+            <td>{{stud.fName}} </td>
+            <td>{{stud.mName}}</td>
+            <td>{{stud.lName}}</td>
+            <td>{{stud.program}} </td>
+            <td><input type="button" class="btn btn-primary" value="Delete" (click)="onDelete(i)"/>
+            </td><td><input type="button" class="btn btn-primary" value="Edit" (click)="edit()"/></td>
+        </tr>
+    </tbody>
+</table>
